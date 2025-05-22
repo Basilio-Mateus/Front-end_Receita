@@ -74,7 +74,7 @@
         line-height: 30px;
       }
 
-      p {
+      .fonte {
         font-family: "Outfit";
       }
 
@@ -96,6 +96,33 @@
       h1 {
         color: hsl(24, 5%, 18%);
       }
+
+      .nutri-value {
+        display: flex;
+        justify-content: space-between;
+        padding-right: 200px;
+      }
+      .container {
+        display: grid;
+        grid-template-columns: auto auto;
+        margin-bottom: 20px;
+      }
+      .container div {
+        font-size: 17px;
+        padding-left: 30px;
+        padding-bottom: 10px;
+        padding-top: 10px;
+        border-bottom: 2px solid rgb(210, 206, 206);
+      }
+
+      /* nth-last-child(-n + 2) serve para retirar alguma configuração dos ultimos itens de acordo com o número dentro do parenteses)  */
+      .container div:nth-last-child(-n + 2) {
+        border-bottom: none;
+      }
+      .cor-brown {
+        color: hsl(14, 45%, 36%);
+        font-weight: bold;
+      }
     </style>
   </head>
 
@@ -110,7 +137,7 @@
       </div>
       <header>
         <h1>Simple Omelette Recipe</h1>
-        <p>
+        <p class="fonte">
           An easy and quick dish, perfect for any meal. This classic omelette
           combines beaten eggs cooked to perfection, optionally filled with your
           choice of cheese, vegetables, or meats.
@@ -175,15 +202,31 @@
       <hr />
       <section>
         <header class="head2">Nutrition</header>
-        The table below shows nutritional values per serving without the
-        additional fillings. Calories 277kcal Carbs 0g Protein 20g Fat 22g
+        <p class="fonte">
+          The table below shows nutritional values per serving without the
+          additional fillings.
+        </p>
+        <div class="container fonte">
+          <div>Calories</div>
+          <div class="cor-brown">277kcal</div>
+
+          <div>Carbs</div>
+          <div class="cor-brown">0g</div>
+
+          <div>Protein</div>
+          <div class="cor-brown">20g</div>
+
+          <div>Fat</div>
+          <div class="cor-brown">22g</div>
+        </div>
       </section>
 
       <div class="attribution">
         Challenge by
         <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
           >Frontend Mentor</a
-        >. Coded by <a href="#">Mateus Basilio</a>.
+        >. Coded by
+        <a href="https://github.com/Basilio-Mateus">Mateus Basilio</a>.
       </div>
     </div>
   </body>
